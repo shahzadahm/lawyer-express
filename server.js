@@ -17,6 +17,11 @@ app.use('/api', contactRoutes);
 app.use('/api', consultationRoutes);
 app.use('/api', serviceRoutes);
 
+app.get('/', (req, res) => {
+  res.send({ message: 'API is working!' });
+});
+
+
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
