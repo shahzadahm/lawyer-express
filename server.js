@@ -10,7 +10,7 @@ dotenv.config();
 
 const app = express();
 app.use(cors());
-app.use(express.json()); // To parse incoming JSON requests
+app.use(express.json()); 
 
 // Routes
 app.use('/api', contactRoutes);
